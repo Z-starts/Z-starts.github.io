@@ -82,9 +82,9 @@
 </li>
 </ol>
 <h3 id="源码分析"><a href="#源码分析" class="headerlink" title="源码分析"></a>源码分析</h3><ol>
-<li><p>内存模式启动信息<br><img src="quartz%E5%86%85%E5%AD%98%E6%A8%A1%E5%BC%8F.png" alt="avater"><br>说明了使用的JobStore，线程池及大小</p>
+<li><p>内存模式启动信息<br><img src="/images/quartz%E5%86%85%E5%AD%98%E6%A8%A1%E5%BC%8F.png" alt="avater"><br>说明了使用的JobStore，线程池及大小</p>
 </li>
-<li><p>DB存储方式并启用集群<br><img src="quartzCluster%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F.png" alt="avater"></p>
+<li><p>DB存储方式并启用集群<br><img src="/images/quartzCluster%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F.png" alt="avater"></p>
 </li>
 <li><p>当我们指定了DataSource后，Quartz启动后会把<code>org.quartz.jobStore.class=org.quartz.impl.jdbcjobstore.JobStoreTX</code> 覆盖为<code>LocalDataSourceJobStore</code>,核心逻辑如下</p>
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="module-access"><span class="module"><span class="identifier">CollectionUtils</span>.</span></span>merge<span class="constructor">PropertiesIntoMap(<span class="params">this</span>.<span class="params">quartzProperties</span>, <span class="params">mergedProps</span>)</span>;</span><br><span class="line"><span class="keyword">if</span> (this.dataSource != null) &#123;</span><br><span class="line">    mergedProps.put(StdSchedulerFactory.PROP_JOB_STORE_CLASS, <span class="module-access"><span class="module"><span class="identifier">LocalDataSourceJobStore</span>.</span></span><span class="keyword">class</span>.get<span class="constructor">Name()</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -109,8 +109,8 @@
 <p>在 <code>quartz.properties</code>中 </p>
 <figure class="highlight plain"><figcaption><span>存储的事务管理类型</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.quartz.jobStore.class &#x3D; org.quartz.impl.jdbcjobstore.JobStoreTX</span><br></pre></td></tr></table></figure>
 <p>指定了事务类型。其initialize方法调用的是父类<code>org.quartz.impl.jdbcjobstore.JobStoreSupport.initialize()</code><br>在方法中指定了使用的是什么锁实现方式，如下图</p>
-<p><img src="DBRowLock%E8%AE%BE%E7%BD%AE.png" alt="avater"></p>
-<p><img src="quartz-simpleSemaphore.png" alt="avatar"></p>
+<p><img src="/images/DBRowLock%E8%AE%BE%E7%BD%AE.png" alt="avater"></p>
+<p><img src="/images/quartz-simpleSemaphore.png" alt="avatar"></p>
 <p>LocalDataSourceJobStore的初始化方式同理，也是其中的<code>initialize</code>方法。</p>
 <h2 id="此次架构升级注意点"><a href="#此次架构升级注意点" class="headerlink" title="此次架构升级注意点"></a>此次架构升级注意点</h2><ol>
 <li><p>之前使用的是内存保持调度信息的方式，所已在代码中有一个进程拉起后手动添加<br>任务的动作<code>com.enmotech.mozhe.sys.service.BatchTaskRunner</code>。当升级为集群模式的时候，由于信息是已经存储好了，<br>quartz会自动拉起所有定时器，不用手动操作，则需要屏蔽addJob相关动作。</p>
