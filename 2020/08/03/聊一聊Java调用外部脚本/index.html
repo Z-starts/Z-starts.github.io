@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>
+        随笔记
+    </title>
+    
+<link rel="stylesheet" href="../../../../libs/highlight/styles/monokai-sublime.css">
+
+    
+<link rel="stylesheet" href="../../../../libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="../../../../css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body id="bodyx">
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            聊一聊Java调用外部脚本
+        </p>
+        <hr>
+    </div>
+    <div class="post-content">
+        <h1 id="Java如何在Linux服务器上调用shell、py等可执行文件"><a href="#Java如何在Linux服务器上调用shell、py等可执行文件" class="headerlink" title="Java如何在Linux服务器上调用shell、py等可执行文件"></a>Java如何在Linux服务器上调用shell、py等可执行文件</h1><blockquote>
+<p>通常你会这么做：</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Runtime.getRuntime().exec(`你想要的脚本`)</span><br></pre></td></tr></table></figure>
+<p>实时上这样写不会生效</p>
+<h1 id="正确的姿势"><a href="#正确的姿势" class="headerlink" title="正确的姿势"></a>正确的姿势</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">String[] commands = &#123;<span class="string">"/bin/sh"</span>, <span class="string">"-c"</span>, cmd&#125;;</span><br><span class="line">Process process = <span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    process = Runtime.getRuntime().exec(commands);</span><br><span class="line">    <span class="keyword">try</span> (InputStream is = process.getInputStream();</span><br><span class="line">         BufferedReader stdInput = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(is));</span><br><span class="line">         BufferedReader stdError = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(is))) &#123;</span><br><span class="line">        <span class="keyword">char</span>[] data = <span class="keyword">new</span> <span class="keyword">char</span>[bufferSize];</span><br><span class="line">        stdInput.read(data, <span class="number">0</span>, data.length);</span><br><span class="line">        stdInputInfo.append(data, <span class="number">0</span>, data.length);</span><br><span class="line">        stdError.read(data, <span class="number">0</span>, data.length);</span><br><span class="line">        stdErrorInfo.append(data, <span class="number">0</span>, data.length);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception ignore) &#123;</span><br><span class="line">        log.error(ignore.getMessage(), ignore);</span><br><span class="line">    &#125;</span><br><span class="line">    process.wait();</span><br><span class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">    log.error(<span class="string">"执行命令失败:&#123;&#125;"</span>, e);</span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (process != <span class="keyword">null</span>) &#123;</span><br><span class="line">        process.destroy();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="如何添加超时机制"><a href="#如何添加超时机制" class="headerlink" title="如何添加超时机制"></a>如何添加超时机制</h1><ol>
+<li><p>可以看到上面的写法会阻塞等待，若指令是一个读取大文件、或者一个长时间业务脚本，则会导致业务系统阻塞，这时就需要考虑超时机制了。</p>
+</li>
+<li><p>如果是使用JDK1.8+ 可以这样做</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">String[] commands = &#123;<span class="string">"/bin/sh"</span>, <span class="string">"-c"</span>, cmd&#125;;</span><br><span class="line">Process process = <span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    process = Runtime.getRuntime().exec(commands);</span><br><span class="line">    <span class="keyword">if</span> (!process.waitFor(timeout, TimeUnit.MILLISECONDS)) &#123;</span><br><span class="line">        process.destroyForcibly();</span><br><span class="line">        process = <span class="keyword">null</span>;</span><br><span class="line">        log.info(<span class="string">"time out"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span> (InputStream is = process.getInputStream();</span><br><span class="line">         BufferedReader stdInput = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(is));</span><br><span class="line">         BufferedReader stdError = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(is))) &#123;</span><br><span class="line">        <span class="keyword">char</span>[] data = <span class="keyword">new</span> <span class="keyword">char</span>[bufferSize];</span><br><span class="line">        stdInput.read(data, <span class="number">0</span>, data.length);</span><br><span class="line">        stdInputInfo.append(data, <span class="number">0</span>, data.length);</span><br><span class="line">        stdError.read(data, <span class="number">0</span>, data.length);</span><br><span class="line">        stdErrorInfo.append(data, <span class="number">0</span>, data.length);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception ignore) &#123;</span><br><span class="line">        log.error(ignore.getMessage(), ignore);</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">    log.error(<span class="string">"执行命令失败:&#123;&#125;"</span>, e);</span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (process != <span class="keyword">null</span>) &#123;</span><br><span class="line">        process.destroy();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果是低版本JDK则考虑使用线程Join的方式来包裹指令来实现</p>
+</li>
+</ol>
+<h1 id="JDK1-8中Linux的waitFor实现方式"><a href="#JDK1-8中Linux的waitFor实现方式" class="headerlink" title="JDK1.8中Linux的waitFor实现方式"></a>JDK1.8中Linux的waitFor实现方式</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">waitFor</span><span class="params">(<span class="keyword">long</span> timeout, TimeUnit unit)</span></span></span><br><span class="line"><span class="function">        <span class="keyword">throws</span> InterruptedException</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> startTime = System.nanoTime();</span><br><span class="line">        <span class="keyword">long</span> rem = unit.toNanos(timeout);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                exitValue(); <span class="comment">/* step 1 调用后如果未退出，则抛出异常*/</span></span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125; <span class="keyword">catch</span>(IllegalThreadStateException ex) &#123; <span class="comment">/* catch 到step1 的异常后执行sleep方法以达到超时的需要*/</span></span><br><span class="line">                <span class="keyword">if</span> (rem &gt; <span class="number">0</span>)</span><br><span class="line">                    Thread.sleep(</span><br><span class="line">                        Math.min(TimeUnit.NANOSECONDS.toMillis(rem) + <span class="number">1</span>, <span class="number">100</span>));</span><br><span class="line">            &#125;</span><br><span class="line">            rem = unit.toNanos(timeout) - (System.nanoTime() - startTime);</span><br><span class="line">        &#125; <span class="keyword">while</span> (rem &gt; <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>进程关闭不完全的问题如何处理，目前遇到在脚本中通过管道、Python脚本等方式会存在父子进程，超时destroy只会关闭父进程，而子进程还是在继续执，这样并没有达到超时终止任务的目的。目前通过下面的方式处理的<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (killAll) &#123;</span><br><span class="line">    Field f = process.getClass().getDeclaredField(<span class="string">"pid"</span>);</span><br><span class="line">    f.setAccessible(<span class="keyword">true</span>);</span><br><span class="line">    <span class="keyword">long</span> pid = f.getInt(process);<span class="comment">//获取父进程pid</span></span><br><span class="line">    <span class="comment">//通过pkill来关闭所有进程。防止子进程未结束</span></span><br><span class="line">    Process kill = Runtime.getRuntime().exec(<span class="keyword">new</span> String[]&#123;<span class="string">"/bin/sh"</span>, <span class="string">"-c"</span>, <span class="string">"pkill -P "</span> + pid&#125;);</span><br><span class="line">    kill.waitFor();</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    process = process.destroyForcibly();<span class="comment">//只会销毁当前进程</span></span><br><span class="line">    process.waitFor();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">process = <span class="keyword">null</span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    </div>
+
+    
+</div>
+    <div class="footer" id="footer">
+    <p>Copyright © 2020 <a class="flink" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>-<a class="flink" href="https://github.com/sanjinhub/hexo-theme-geek" target="_blank" rel="noopener">Geek</a>.
+        <label class="el-switch el-switch-green el-switch-sm" style="vertical-align: sub;">
+            <input type="checkbox" name="switch" id="update_style">
+            <span class="el-switch-style"></span>
+        </label>
+<!--         <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+        </script> -->
+    </p>
+</div>
+<input type="hidden" id="web_style" value="black">
+<input type="hidden" id="valine_appid" value="CmCti21ooOOIzFOhEyFkFvR0-gzGzoHsz">
+<input type="hidden" id="valine_appKey" value="FqiyUqbg7McKN2eG0MCewupf">
+
+<script src="../../../../libs/jquery.min.js"></script>
+
+
+<script src="../../../../libs/highlight/highlight.pack.js"></script>
+
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+
+<script src="../../../../js/js.js"></script>
+
+<style type="text/css">
+.v * {
+    color: #698fca;
+}
+
+.v .vlist .vcard .vhead .vsys {
+    color: #3a3e4a;
+}
+
+.v .vlist .vcard .vh .vmeta .vat {
+    color: #638fd5;
+}
+
+.v .vlist .vcard .vhead .vnick {
+    color: #6ba1ff;
+}
+
+.v a {
+    color: #8696b1;
+}
+
+.v .vlist .vcard .vhead .vnick:hover {
+    color: #669bfc;
+}
+</style>
+</body>
+
+</html>
