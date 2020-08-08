@@ -2,7 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://z-starts.github.io/2020/08/07/%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E5%AD%A6%E4%B9%A0Linux/</loc>
+    
+    <lastmod>2020-08-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://z-starts.github.io/2020/08/06/SpringBoot1Quartz%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F/</loc>
+    
+    <lastmod>2020-08-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://z-starts.github.io/2020/08/03/%E8%81%8A%E4%B8%80%E8%81%8AJava%E8%B0%83%E7%94%A8%E5%A4%96%E9%83%A8%E8%84%9A%E6%9C%AC/</loc>
+    
+    <lastmod>2020-08-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://z-starts.github.io/2017/08/13/spring-boot-jpa/</loc>
     
     <lastmod>2020-08-08</lastmod>
     
@@ -26,20 +47,6 @@
     <loc>http://z-starts.github.io/categories/index.html</loc>
     
     <lastmod>2020-08-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://z-starts.github.io/2020/08/07/%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E5%AD%A6%E4%B9%A0Linux/</loc>
-    
-    <lastmod>2020-08-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://z-starts.github.io/2020/08/03/%E8%81%8A%E4%B8%80%E8%81%8AJava%E8%B0%83%E7%94%A8%E5%A4%96%E9%83%A8%E8%84%9A%E6%9C%AC/</loc>
-    
-    <lastmod>2020-08-07</lastmod>
     
   </url>
   
@@ -85,13 +92,6 @@
     
   </url>
   
-  <url>
-    <loc>http://z-starts.github.io/2017/08/13/spring-boot-jpa/</loc>
-    
-    <lastmod>2020-07-25</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>http://z-starts.github.io/</loc>
@@ -109,14 +109,21 @@
   </url>
   
   <url>
-    <loc>http://z-starts.github.io/tags/Quartz/</loc>
+    <loc>http://z-starts.github.io/tags/%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2020-08-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://z-starts.github.io/tags/Linux/</loc>
+    <loc>http://z-starts.github.io/tags/JDK/</loc>
+    <lastmod>2020-08-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://z-starts.github.io/tags/Quartz/</loc>
     <lastmod>2020-08-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -126,6 +133,13 @@
   
   <url>
     <loc>http://z-starts.github.io/categories/Java/</loc>
+    <lastmod>2020-08-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://z-starts.github.io/categories/Linux/</loc>
     <lastmod>2020-08-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
