@@ -1,246 +1,1207 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-hans">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>
-        随笔记
-    </title>
-    
-<link rel="stylesheet" href="libs/highlight/styles/monokai-sublime.css">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-    
-<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/main.css">
 
-    
-<link rel="stylesheet" href="css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
 
-<body id="bodyx">
-    <div class="hd logodiv">
-    <img src="img/logo.png" class="logopng">
-    <p class="logot"><span class="logo_1">&lt;</span><span class="logo_2">/</span><span class="logo_3">#</span> 0xDDE58 <span class="logo_3">#</span><span class="logo_2">/</span><span class="logo_1">&gt;</span></p>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"z-starts.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
+  </script>
+
+  <meta name="description" content="好记性不如烂笔头">
+<meta property="og:type" content="website">
+<meta property="og:title" content="随笔记">
+<meta property="og:url" content="http://z-starts.github.io/index.html">
+<meta property="og:site_name" content="随笔记">
+<meta property="og:description" content="好记性不如烂笔头">
+<meta property="article:author" content="0XDDE58">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://z-starts.github.io/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-hans'
+  };
+</script>
+
+  <title>随笔记</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">随笔记</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">平凡人平凡路，沉下心迈出步</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
-<div class="hd">
-    <ol class="breadcrumb">
-        
-            <li><a class="ba" href="/java">Java</a></li>
-        
-            <li><a class="ba" href="/about">关于</a></li>
-        
-            <li><a class="ba" href="http://z-starts.github.io/">Github</a></li>
-        
-    </ol>
-    <hr class="breadcrumbhr">
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">1</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
 </div>
-<div class="hd">
-    
-    
-        
-        
-            <div class="titlex">
-                <p><span class="jing">#</span>
-                    2020
-                </p>
-            </div>
-            
-        
-        <a class="flink" href="2020/08/07/%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E5%AD%A6%E4%B9%A0Linux/">
-            <div class="list">
-                <div class="postname">
-                    一步一步学习Linux
-                </div>
-                <div class="posttime">
-                    August 7th
-                </div>
-            </div>
-        </a>
-    
-        
-        
-        <a class="flink" href="2020/08/06/SpringBoot1Quartz%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F/">
-            <div class="list">
-                <div class="postname">
-                    SpringBoot1Quartz集群模式
-                </div>
-                <div class="posttime">
-                    August 6th
-                </div>
-            </div>
-        </a>
-    
-        
-        
-        <a class="flink" href="2020/08/03/%E8%81%8A%E4%B8%80%E8%81%8AJava%E8%B0%83%E7%94%A8%E5%A4%96%E9%83%A8%E8%84%9A%E6%9C%AC/">
-            <div class="list">
-                <div class="postname">
-                    聊一聊Java调用外部脚本
-                </div>
-                <div class="posttime">
-                    August 3rd
-                </div>
-            </div>
-        </a>
-    
-        
-        
-            <div class="titlex">
-                <p><span class="jing">#</span>
-                    2017
-                </p>
-            </div>
-            
-        
-        <a class="flink" href="2017/08/24/joke/">
-            <div class="list">
-                <div class="postname">
-                    开心一刻
-                </div>
-                <div class="posttime">
-                    August 24th
-                </div>
-            </div>
-        </a>
-    
-        
-        
-        <a class="flink" href="2017/08/23/spring-groovy-hotload.1/">
-            <div class="list">
-                <div class="postname">
-                    Spring boot groovy 热更新
-                </div>
-                <div class="posttime">
-                    August 23rd
-                </div>
-            </div>
-        </a>
-    
-        
-        
-        <a class="flink" href="2017/08/13/spring-boot-jpa/">
-            <div class="list">
-                <div class="postname">
-                    Spring boot jpa 多数据源配置
-                </div>
-                <div class="posttime">
-                    August 13th
-                </div>
-            </div>
-        </a>
-    
-        
-        
-            <div class="titlex">
-                <p><span class="jing">#</span>
-                    2015
-                </p>
-            </div>
-            
-        
-        <a class="flink" href="2015/12/19/nginx%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E9%85%8D%E7%BD%AE/">
-            <div class="list">
-                <div class="postname">
-                    nginx负载均衡配置
-                </div>
-                <div class="posttime">
-                    December 19th
-                </div>
-            </div>
-        </a>
-    
-        
-        
-        <a class="flink" href="2015/12/03/%E6%97%A5%E6%8B%B1%E4%B8%80%E5%8D%92/">
-            <div class="list">
-                <div class="postname">
-                    日拱一卒
-                </div>
-                <div class="posttime">
-                    December 3rd
-                </div>
-            </div>
-        </a>
-    
-        
-        
-        <a class="flink" href="2015/11/22/%E5%9B%9E%E5%BF%86/">
-            <div class="list">
-                <div class="postname">
-                    近一年工作回忆
-                </div>
-                <div class="posttime">
-                    November 22nd
-                </div>
-            </div>
-        </a>
-    
-        
-        
-        <a class="flink" href="2015/10/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E8%AE%B0%E5%BD%95/">
-            <div class="list">
-                <div class="postname">
-                    开篇
-                </div>
-                <div class="posttime">
-                    October 24th
-                </div>
-            </div>
-        </a>
-    
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="0XDDE58"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">0XDDE58</p>
+  <div class="site-description" itemprop="description">好记性不如烂笔头</div>
 </div>
-    <div class="footer" id="footer">
-    <p>Copyright © 2020 <a class="flink" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>-<a class="flink" href="https://github.com/sanjinhub/hexo-theme-geek" target="_blank" rel="noopener">Geek</a>.
-        <label class="el-switch el-switch-green el-switch-sm" style="vertical-align: sub;">
-            <input type="checkbox" name="switch" id="update_style">
-            <span class="el-switch-style"></span>
-        </label>
-<!--         <script type="text/javascript">
-        var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
-        document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
-        </script> -->
-    </p>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
 </div>
-<input type="hidden" id="web_style" value="black">
-<input type="hidden" id="valine_appid" value="CmCti21ooOOIzFOhEyFkFvR0-gzGzoHsz">
-<input type="hidden" id="valine_appKey" value="FqiyUqbg7McKN2eG0MCewupf">
-
-<script src="libs/jquery.min.js"></script>
 
 
-<script src="libs/highlight/highlight.pack.js"></script>
 
-<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-<script src="js/js.js"></script>
 
-<style type="text/css">
-.v * {
-    color: #698fca;
-}
+      </header>
 
-.v .vlist .vcard .vhead .vsys {
-    color: #3a3e4a;
-}
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
-.v .vlist .vcard .vh .vmeta .vat {
-    color: #638fd5;
-}
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-.v .vlist .vcard .vhead .vnick {
-    color: #6ba1ff;
-}
 
-.v a {
-    color: #8696b1;
-}
+      <div class="main-inner">
+        
 
-.v .vlist .vcard .vhead .vnick:hover {
-    color: #669bfc;
-}
-</style>
+        <div class="content index posts-expand">
+          
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="http://z-starts.github.io/2020/08/07/%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E5%AD%A6%E4%B9%A0Linux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="0XDDE58">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔记">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/07/%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E5%AD%A6%E4%B9%A0Linux/" class="post-title-link" itemprop="url">一步一步学习Linux</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-08-07 19:07:41 / Modified: 19:09:00" itemprop="dateCreated datePublished" datetime="2020-08-07T19:07:41+08:00">2020-08-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="重学Linux"><a href="#重学Linux" class="headerlink" title="重学Linux"></a>重学Linux</h1><h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h2 id="安全设置"><a href="#安全设置" class="headerlink" title="安全设置"></a>安全设置</h2><h2 id="性能调优"><a href="#性能调优" class="headerlink" title="性能调优"></a>性能调优</h2><h2 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h2><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="http://z-starts.github.io/2020/08/06/SpringBoot1Quartz%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="0XDDE58">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔记">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/06/SpringBoot1Quartz%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">SpringBoot1Quartz集群模式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-08-06 16:16:48" itemprop="dateCreated datePublished" datetime="2020-08-06T16:16:48+08:00">2020-08-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-08 18:11:12" itemprop="dateModified" datetime="2020-08-08T18:11:12+08:00">2020-08-08</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="spring-boot-1-如何使用Quartz-cluster"><a href="#spring-boot-1-如何使用Quartz-cluster" class="headerlink" title="spring boot 1 如何使用Quartz cluster"></a>spring boot 1 如何使用Quartz cluster</h1><h2 id="maven依赖"><a href="#maven依赖" class="headerlink" title="maven依赖"></a>maven依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.quartz-scheduler<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>quartz<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context-support<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.3.23.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span><span class="comment">&lt;!-- 数据源DataSource需要，可以使用其他组件替代 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-jdbc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring.boot.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="quartz-properties配置"><a href="#quartz-properties配置" class="headerlink" title="quartz.properties配置"></a>quartz.properties配置</h2><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 是否使用properties作为数据存储</span></span><br><span class="line"><span class="meta">org.quartz.jobStore.useProperties</span>=<span class="string">false</span></span><br><span class="line"><span class="comment"># 数据库中的表格命名前缀</span></span><br><span class="line"><span class="meta">org.quartz.jobStore.tablePrefix</span>=<span class="string">QRTZ_</span></span><br><span class="line"><span class="comment"># 是否是一个集群，是不是分布式的任务</span></span><br><span class="line"><span class="meta">org.quartz.jobStore.isClustered</span>=<span class="string">true</span></span><br><span class="line"><span class="comment"># 集群检查周期，单位毫秒。可以自定义缩短时间。 当某一个节点宕机的时候，其他节点等待多久后开始执行任务。</span></span><br><span class="line"><span class="meta">org.quartz.jobStore.clusterCheckinInterval</span>=<span class="string">5000</span></span><br><span class="line"><span class="comment"># 单位毫秒， 集群中的节点退出后，再次检查进入的时间间隔。</span></span><br><span class="line"><span class="meta">org.quartz.jobStore.misfireThreshold</span>=<span class="string">1000</span></span><br><span class="line"><span class="comment"># 事务隔离级别</span></span><br><span class="line"><span class="meta">org.quartz.jobStore.txIsolationLevelReadCommitted</span>=<span class="string">true</span></span><br><span class="line"><span class="comment"># 存储的事务管理类型</span></span><br><span class="line"><span class="comment">#org.quartz.jobStore.class=org.quartz.impl.jdbcjobstore.JobStoreTX</span></span><br><span class="line"><span class="comment"># 使用的Delegate类型</span></span><br><span class="line"><span class="comment">#org.quartz.jobStore.driverDelegateClass = org.quartz.impl.jdbcjobstore.StdJDBCDelegate</span></span><br><span class="line"><span class="comment"># 集群的命名，一个集群要有相同的命名。</span></span><br><span class="line"><span class="meta">org.quartz.scheduler.instanceName</span>=<span class="string">ClusterQuartz</span></span><br><span class="line"><span class="comment"># 节点的命名，可以自定义。 AUTO代表自动生成。</span></span><br><span class="line"><span class="meta">org.quartz.scheduler.instanceId</span>=<span class="string">AUTO</span></span><br><span class="line"><span class="comment"># rmi远程协议是否发布</span></span><br><span class="line"><span class="meta">org.quartz.scheduler.rmi.export</span>=<span class="string">false</span></span><br><span class="line"><span class="comment"># rmi远程协议代理是否创建</span></span><br><span class="line"><span class="meta">org.quartz.scheduler.rmi.proxy</span>=<span class="string">false</span></span><br><span class="line"><span class="comment"># 是否使用用户控制的事务环境触发执行job。</span></span><br><span class="line"><span class="meta">org.quartz.scheduler.wrapJobExecutionInUserTransaction</span>=<span class="string">false</span></span><br><span class="line"><span class="comment"># 指定默认线程池大小</span></span><br><span class="line"><span class="meta">org.quartz.threadPool.threadCount</span>=<span class="string">50</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="相关quartz-bean配置"><a href="#相关quartz-bean配置" class="headerlink" title="相关quartz bean配置"></a>相关quartz bean配置</h2><ol>
+<li><p>装配SchedulerFactoryBean ，替换数据源</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuartzConfig</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> DataSource dataSource;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> SchedulerFactoryBean <span class="title">schedulerFactoryBean</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        SchedulerFactoryBean schedulerFactoryBean = <span class="keyword">new</span> SchedulerFactoryBean();</span><br><span class="line">        schedulerFactoryBean.setDataSource(dataSource); <span class="comment">// 使用application.properties 中的数据源</span></span><br><span class="line">        schedulerFactoryBean.setOverwriteExistingJobs(<span class="keyword">true</span>);</span><br><span class="line"><span class="comment">//        schedulerFactoryBean.setJobFactory(jobFactory);</span></span><br><span class="line">        schedulerFactoryBean.setQuartzProperties(quartzProperties());</span><br><span class="line">        schedulerFactoryBean.setSchedulerName(<span class="string">"quartz-cluster-scheduler"</span>);</span><br><span class="line">        schedulerFactoryBean.setStartupDelay(<span class="number">2</span>);<span class="comment">// 延迟两秒启动</span></span><br><span class="line">        schedulerFactoryBean.setAutoStartup(<span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">return</span> schedulerFactoryBean;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> Properties <span class="title">quartzProperties</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;<span class="comment">//解析quartz配置</span></span><br><span class="line">        PropertiesFactoryBean propertiesFactoryBean = <span class="keyword">new</span> PropertiesFactoryBean();</span><br><span class="line">        propertiesFactoryBean.setLocation(<span class="keyword">new</span> ClassPathResource(<span class="string">"quartz.properties"</span>));</span><br><span class="line">        propertiesFactoryBean.afterPropertiesSet();</span><br><span class="line">        Properties properties = propertiesFactoryBean.getObject();</span><br><span class="line">        <span class="keyword">return</span> properties;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自定义Job类</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="meta">@DisallowConcurrentExecution</span> <span class="comment">//重要</span></span><br><span class="line"><span class="meta">@PersistJobDataAfterExecution</span> <span class="comment">//存储任务数据</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CustomJob</span> <span class="keyword">extends</span> <span class="title">QuartzJobBean</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">executeInternal</span><span class="params">(JobExecutionContext jobExecutionContext)</span> <span class="keyword">throws</span> JobExecutionException </span>&#123;</span><br><span class="line">        <span class="comment">// 获取参数</span></span><br><span class="line">        JobDataMap jobDataMap = jobExecutionContext.getJobDetail().getJobDataMap();</span><br><span class="line">        <span class="comment">// 业务逻辑 ...</span></span><br><span class="line">        log.info(<span class="string">"------springbootquartzonejob执行"</span> + jobDataMap.get(<span class="string">"name"</span>).toString() + <span class="string">"###############"</span> + jobExecutionContext.getTrigger());</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>封装addJob/deleteJob方便使用</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuartzService</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> Scheduler scheduler;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 增加一个job</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> jobClass     任务实现类</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> jobName      任务名称(建议唯一)</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> jobGroupName 任务组名</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> jobTime      时间表达式 （如：0/5 * * * * ? ）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> jobData      参数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addJob</span><span class="params">(Class&lt;? extends QuartzJobBean&gt; jobClass, String jobName, String jobGroupName, String jobTime, Map jobData)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 创建jobDetail实例，绑定Job实现类</span></span><br><span class="line">            <span class="comment">// 指明job的名称，所在组的名称，以及绑定job类</span></span><br><span class="line">            <span class="comment">// 任务名称和组构成任务key</span></span><br><span class="line">            JobDetail jobDetail = JobBuilder.newJob(jobClass).withIdentity(jobName, jobGroupName)</span><br><span class="line">                    .build();</span><br><span class="line">            <span class="comment">// 设置job参数</span></span><br><span class="line">            <span class="keyword">if</span> (jobData != <span class="keyword">null</span> &amp;&amp; jobData.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                jobDetail.getJobDataMap().putAll(jobData);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 定义调度触发规则</span></span><br><span class="line">            <span class="comment">// 使用cornTrigger规则</span></span><br><span class="line">            <span class="comment">// 触发器key</span></span><br><span class="line"><span class="comment">//            Trigger trigger = TriggerBuilder.newTrigger().withIdentity(jobName, jobGroupName)</span></span><br><span class="line"><span class="comment">//                    .startAt(DateBuilder.futureDate(1, DateBuilder.IntervalUnit.SECOND))</span></span><br><span class="line"><span class="comment">//                    .withSchedule(CronScheduleBuilder.cronSchedule(jobTime)).startNow().build();</span></span><br><span class="line"><span class="comment">//            // 把作业和触发器注册到任务调度中</span></span><br><span class="line"><span class="comment">//            scheduler.scheduleJob(jobDetail, trigger);</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 设置定时任务执行方式</span></span><br><span class="line">            CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(jobTime)</span><br><span class="line"><span class="comment">//            MISFIRE_INSTRUCTION_FIRE_ONCE_NOW 立即执行一次</span></span><br><span class="line"><span class="comment">//            MISFIRE_INSTRUCTION_DO_NOTHING 不执行，等待下次触发</span></span><br><span class="line">                    .withMisfireHandlingInstructionDoNothing();</span><br><span class="line">            <span class="comment">// 构建触发器trigger</span></span><br><span class="line">            CronTrigger trigger = TriggerBuilder.newTrigger().withIdentity(jobName).withSchedule(scheduleBuilder).build();</span><br><span class="line"></span><br><span class="line">            scheduler.scheduleJob(jobDetail, trigger);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 删除任务一个job</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> jobName      任务名称</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> jobGroupName 任务组名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteJob</span><span class="params">(String jobName, String jobGroupName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            scheduler.deleteJob(<span class="keyword">new</span> JobKey(jobName, jobGroupName));</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>外部操作定时器的地方只需要<code>@Autowired private QuartzService quartzService;</code> 注入service 按需调用即可。</li>
+</ol>
+<h2 id="Quartz-调度原理"><a href="#Quartz-调度原理" class="headerlink" title="Quartz 调度原理"></a>Quartz 调度原理</h2><ol>
+<li><p>Scheduler 任务调度控制器 (StdScheduler)</p>
+<blockquote>
+<p>管理 Trigger 和 Job</p>
+</blockquote>
+</li>
+<li><p>Trigger 任务调度单元</p>
+<blockquote>
+<p>CronTrigger 可以通过 Cron 表达式规定任务触发规则</p>
+</blockquote>
+</li>
+<li><p>SimpleTrigger 规定任务执行几次，每次的时间间隔，类似 SchedulerExecutor</p>
+<blockquote>
+<p>Job 调度任务，用于定义你的业务任务具体执行过程</p>
+</blockquote>
+</li>
+<li><p>一个 Job 可以对应多个 Trigger，一个 Trigger 只能对应一个 Job</p>
+</li>
+</ol>
+<h2 id="Quartz-cluster-实现原理"><a href="#Quartz-cluster-实现原理" class="headerlink" title="Quartz cluster 实现原理"></a>Quartz cluster 实现原理</h2><p>集群的概念：是指在多台不同的服务器中部署相同应用或服务模块，构成一个集群，通过负载均衡设备对外提供服务。<br>分布式的概念：是指在多台不同的服务器中部署不同的服务模块，通过远程调用协同工作，对外提供服务。</p>
+<h3 id="quartz的实现核心："><a href="#quartz的实现核心：" class="headerlink" title="quartz的实现核心："></a>quartz的实现核心：</h3><ol>
+<li><p>集群调度相关类</p>
+<blockquote>
+<p>JobStoreSuppoœrt 数据库存储任务信息实现<br>StdRowLockSemaphore 数据库行锁实现</p>
+</blockquote>
+</li>
+<li><p>表QRTZ_SCHEDULER_STATE维护失效实例（LAST_CHECKIN_TIME 心跳时间）信息</p>
+</li>
+<li><p>表QRTZ_LOCKS实现数据库行锁</p>
+</li>
+</ol>
+<blockquote>
+<p>通过 select for update 语句会阻塞其他同样针对这一行的 select 语句，直到该 session commit 或 rollback </p>
+</blockquote>
+<ol start="5">
+<li>更多原理查看次连接 <a href="https://cn.bing.com/search?q=java%20quartz%20cluster%20%E5%8E%9F%E7%90%86&amp;qs=n&amp;form=QBRE&amp;sp=-1&amp;pq=java%20quartz&amp;sc=0-11&amp;sk=&amp;cvid=F4304AFED03B413088E24872FD295FB0" target="_blank" rel="noopener">https://cn.bing.com/search?q=java%20quartz%20cluster%20%E5%8E%9F%E7%90%86&amp;qs=n&amp;form=QBRE&amp;sp=-1&amp;pq=java%20quartz&amp;sc=0-11&amp;sk=&amp;cvid=F4304AFED03B413088E24872FD295FB0</a></li>
+</ol>
+<h3 id="源码分析"><a href="#源码分析" class="headerlink" title="源码分析"></a>源码分析</h3><ol>
+<li><p>内存模式启动信息(不使用db持久化任务)<br><img src="images/quartz%E5%86%85%E5%AD%98%E6%A8%A1%E5%BC%8F.png" alt="avater"><br>说明了使用的JobStore，线程池及大小</p>
+</li>
+<li><p>DB存储方式并启用集群<br><img src="images/quartzCluster%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F.png" alt="avater"></p>
+</li>
+<li><p>当我们指定了DataSource后，Quartz启动后会把<code>org.quartz.jobStore.class=org.quartz.impl.jdbcjobstore.JobStoreTX</code> 覆盖为<code>LocalDataSourceJobStore</code>,核心逻辑如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CollectionUtils.mergePropertiesIntoMap(<span class="keyword">this</span>.quartzProperties, mergedProps);</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">this</span>.dataSource != <span class="keyword">null</span>) &#123;</span><br><span class="line">    mergedProps.put(StdSchedulerFactory.PROP_JOB_STORE_CLASS, LocalDataSourceJobStore<span class="class">.<span class="keyword">class</span>.<span class="title">getName</span>())</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<p>Quartz 初始化过程</p>
+<ol>
+<li>配置SchedulerFactoryBean <code>org.springframework.scheduling.quartz.SchedulerFactoryBean.afterPropertiesSet</code> </li>
+<li>执行 <code>org.springframework.scheduling.quartz.SchedulerFactoryBean.prepareSchedulerFactory</code></li>
+<li>然后在 次方法中会初始化 <code>org.springframework.scheduling.quartz.SchedulerFactoryBean.initSchedulerFactory</code></li>
+<li>会先准备配置然后做<code>org.springframework.scheduling.quartz.SchedulerFactoryBean.prepareScheduler</code>创建真正的Scheduler。</li>
+<li>完成创建后会调用<code>org.quartz.impl.StdSchedulerFactory.instantiate()</code>进行其他组件初始化。</li>
+</ol>
+<h4 id="misfire-说明"><a href="#misfire-说明" class="headerlink" title="misfire 说明"></a>misfire 说明</h4><p>详细分析在这个地址<br><a href="https://segmentfault.com/a/1190000015492260，" target="_blank" rel="noopener">https://segmentfault.com/a/1190000015492260，</a><br>解决我测试中发现的misfire问题（kill 进程，等待一定时间后再次拉起服务，依然会再次触发几次任务），主要是这个计算公式</p>
+<blockquote>
+<p>调度线程会一次性拉取距离现在，一定时间窗口内的，一定数量内的，即将触发的trigger信息。那么，时间窗口和数量信息如何确定呢，我们先来看一下，以下几个参数：<br>  idleWaitTime： 默认30s，可通过配置属性org.quartz.scheduler.idleWaitTime设置。<br>  availThreadCount：获取可用（空闲）的工作线程数量，总会大于1，因为该方法会一直阻塞，直到有工作线程空闲下来。<br>  maxBatchSize：一次拉取trigger的最大数量，默认是1，可通过org.quartz.scheduler.batchTriggerAcquisitionMaxCount改写<br>  batchTimeWindow：时间窗口调节参数，默认是0，可通过org.quartz.scheduler.batchTriggerAcquisitionFireAheadTimeWindow改写<br>  misfireThreshold： 超过这个时间还未触发的trigger,被认为发生了misfire,默认60s，可通过org.quartz.jobStore.misfireThreshold设置。<br>  调度线程一次会拉取NEXT_FIRE_TIME小于（now + idleWaitTime +batchTimeWindow）,大于（now - misfireThreshold）的，min(availThreadCount,maxBatchSize)个triggers，<strong>默认情况下，会拉取未来30s，过去60s之间还未fire的1个trigger</strong>。随后将这些triggers的状态由WAITING改为ACQUIRED，并插入fired_triggers表。</p>
+</blockquote>
+<p>​    这样子通过调整配置中的  </p>
+<p> <code>#单位毫秒， 集群中的节点退出后，再次检查进入的时间间隔 org.quartz.jobStore.misfireThreshold=1000</code> 到一个较小值，这样<code>MISFIRE_INSTRUCTION_DO_NOTHING</code>  就能够达到我想要的，错过就不执行，等待下一次执行时机再触发的目的。</p>
+<p>在 <code>quartz.properties</code>中 </p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">org.quartz.jobStore.class</span> = <span class="string">org.quartz.impl.jdbcjobstore.JobStoreTX</span></span><br></pre></td></tr></table></figure>
+<p>指定了事务类型。其initialize方法调用的是父类<code>org.quartz.impl.jdbcjobstore.JobStoreSupport.initialize()</code><br>在方法中指定了使用的是什么锁实现方式，如下图</p>
+<p><img src="images/DBRowLock%E8%AE%BE%E7%BD%AE.png" alt="avater"></p>
+<p><img src="images/quartz-simpleSemaphore.png" alt="avatar"></p>
+<p>LocalDataSourceJobStore的初始化方式同理，也是其中的<code>initialize</code>方法。</p>
+<h2 id="此次架构升级注意点"><a href="#此次架构升级注意点" class="headerlink" title="此次架构升级注意点"></a>此次架构升级注意点</h2><ol>
+<li><p>之前使用的是内存保持调度信息的方式，所已在代码中有一个进程拉起后手动添加<br>任务的动作<code>com.enmotech.mozhe.sys.service.BatchTaskRunner</code>。当升级为集群模式的时候，由于信息是已经存储好了，<br>quartz会自动拉起所有定时器，不用手动操作，则需要屏蔽addJob相关动作。</p>
+</li>
+<li><p>定时器相关的功能，如果有停用、终止动作，最好同步做deleteJob操作，避免相同任务存在多个。</p>
+</li>
+<li><p>使用Spring 自身提供的<code>@EnableScheduling</code> 定时器机制，需要替换为Quartz的方式来做</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="http://z-starts.github.io/2020/08/03/%E8%81%8A%E4%B8%80%E8%81%8AJava%E8%B0%83%E7%94%A8%E5%A4%96%E9%83%A8%E8%84%9A%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="0XDDE58">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔记">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/03/%E8%81%8A%E4%B8%80%E8%81%8AJava%E8%B0%83%E7%94%A8%E5%A4%96%E9%83%A8%E8%84%9A%E6%9C%AC/" class="post-title-link" itemprop="url">聊一聊Java调用外部脚本</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-08-03 19:28:11" itemprop="dateCreated datePublished" datetime="2020-08-03T19:28:11+08:00">2020-08-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-07 18:58:30" itemprop="dateModified" datetime="2020-08-07T18:58:30+08:00">2020-08-07</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Java如何在Linux服务器上调用shell、py等可执行文件"><a href="#Java如何在Linux服务器上调用shell、py等可执行文件" class="headerlink" title="Java如何在Linux服务器上调用shell、py等可执行文件"></a>Java如何在Linux服务器上调用shell、py等可执行文件</h1><blockquote>
+<p>通常你会这么做：</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Runtime.getRuntime().exec(`你想要的脚本`)</span><br></pre></td></tr></table></figure>
+<p>实时上这样写不会生效</p>
+<h1 id="正确的姿势"><a href="#正确的姿势" class="headerlink" title="正确的姿势"></a>正确的姿势</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">String[] commands = &#123;<span class="string">"/bin/sh"</span>, <span class="string">"-c"</span>, cmd&#125;;</span><br><span class="line">Process process = <span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    process = Runtime.getRuntime().exec(commands);</span><br><span class="line">    <span class="keyword">try</span> (InputStream is = process.getInputStream();</span><br><span class="line">         BufferedReader stdInput = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(is));</span><br><span class="line">         BufferedReader stdError = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(is))) &#123;</span><br><span class="line">        <span class="keyword">char</span>[] data = <span class="keyword">new</span> <span class="keyword">char</span>[bufferSize];</span><br><span class="line">        stdInput.read(data, <span class="number">0</span>, data.length);</span><br><span class="line">        stdInputInfo.append(data, <span class="number">0</span>, data.length);</span><br><span class="line">        stdError.read(data, <span class="number">0</span>, data.length);</span><br><span class="line">        stdErrorInfo.append(data, <span class="number">0</span>, data.length);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception ignore) &#123;</span><br><span class="line">        log.error(ignore.getMessage(), ignore);</span><br><span class="line">    &#125;</span><br><span class="line">    process.wait();</span><br><span class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">    log.error(<span class="string">"执行命令失败:&#123;&#125;"</span>, e);</span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (process != <span class="keyword">null</span>) &#123;</span><br><span class="line">        process.destroy();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="如何添加超时机制"><a href="#如何添加超时机制" class="headerlink" title="如何添加超时机制"></a>如何添加超时机制</h1><ol>
+<li><p>可以看到上面的写法会阻塞等待，若指令是一个读取大文件、或者一个长时间业务脚本，则会导致业务系统阻塞，这时就需要考虑超时机制了。</p>
+</li>
+<li><p>如果是使用JDK1.8+ 可以这样做</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">String[] commands = &#123;<span class="string">"/bin/sh"</span>, <span class="string">"-c"</span>, cmd&#125;;</span><br><span class="line">Process process = <span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    process = Runtime.getRuntime().exec(commands);</span><br><span class="line">    <span class="keyword">if</span> (!process.waitFor(timeout, TimeUnit.MILLISECONDS)) &#123;</span><br><span class="line">        process.destroyForcibly();</span><br><span class="line">        process = <span class="keyword">null</span>;</span><br><span class="line">        log.info(<span class="string">"time out"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span> (InputStream is = process.getInputStream();</span><br><span class="line">         BufferedReader stdInput = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(is));</span><br><span class="line">         BufferedReader stdError = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(is))) &#123;</span><br><span class="line">        <span class="keyword">char</span>[] data = <span class="keyword">new</span> <span class="keyword">char</span>[bufferSize];</span><br><span class="line">        stdInput.read(data, <span class="number">0</span>, data.length);</span><br><span class="line">        stdInputInfo.append(data, <span class="number">0</span>, data.length);</span><br><span class="line">        stdError.read(data, <span class="number">0</span>, data.length);</span><br><span class="line">        stdErrorInfo.append(data, <span class="number">0</span>, data.length);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception ignore) &#123;</span><br><span class="line">        log.error(ignore.getMessage(), ignore);</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">    log.error(<span class="string">"执行命令失败:&#123;&#125;"</span>, e);</span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (process != <span class="keyword">null</span>) &#123;</span><br><span class="line">        process.destroy();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果是低版本JDK则考虑使用线程Join的方式来包裹指令来实现</p>
+</li>
+</ol>
+<h1 id="JDK1-8中Linux的waitFor实现方式"><a href="#JDK1-8中Linux的waitFor实现方式" class="headerlink" title="JDK1.8中Linux的waitFor实现方式"></a>JDK1.8中Linux的waitFor实现方式</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">waitFor</span><span class="params">(<span class="keyword">long</span> timeout, TimeUnit unit)</span></span></span><br><span class="line"><span class="function">        <span class="keyword">throws</span> InterruptedException</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> startTime = System.nanoTime();</span><br><span class="line">        <span class="keyword">long</span> rem = unit.toNanos(timeout);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                exitValue(); <span class="comment">/* step 1 调用后如果未退出，则抛出异常*/</span></span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125; <span class="keyword">catch</span>(IllegalThreadStateException ex) &#123; <span class="comment">/* catch 到step1 的异常后执行sleep方法以达到超时的需要*/</span></span><br><span class="line">                <span class="keyword">if</span> (rem &gt; <span class="number">0</span>)</span><br><span class="line">                    Thread.sleep(</span><br><span class="line">                        Math.min(TimeUnit.NANOSECONDS.toMillis(rem) + <span class="number">1</span>, <span class="number">100</span>));</span><br><span class="line">            &#125;</span><br><span class="line">            rem = unit.toNanos(timeout) - (System.nanoTime() - startTime);</span><br><span class="line">        &#125; <span class="keyword">while</span> (rem &gt; <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>进程关闭不完全的问题如何处理，目前遇到在脚本中通过管道、Python脚本等方式会存在父子进程，超时destroy只会关闭父进程，而子进程还是在继续执，这样并没有达到超时终止任务的目的。目前通过下面的方式处理的<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (killAll) &#123;</span><br><span class="line">    Field f = process.getClass().getDeclaredField(<span class="string">"pid"</span>);</span><br><span class="line">    f.setAccessible(<span class="keyword">true</span>);</span><br><span class="line">    <span class="keyword">long</span> pid = f.getInt(process);<span class="comment">//获取父进程pid</span></span><br><span class="line">    <span class="comment">//通过pkill来关闭所有进程。防止子进程未结束</span></span><br><span class="line">    Process kill = Runtime.getRuntime().exec(<span class="keyword">new</span> String[]&#123;<span class="string">"/bin/sh"</span>, <span class="string">"-c"</span>, <span class="string">"pkill -P "</span> + pid&#125;);</span><br><span class="line">    kill.waitFor();</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    process = process.destroyForcibly();<span class="comment">//只会销毁当前进程</span></span><br><span class="line">    process.waitFor();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">process = <span class="keyword">null</span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="http://z-starts.github.io/2017/08/24/joke/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="0XDDE58">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔记">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/08/24/joke/" class="post-title-link" itemprop="url">开心一刻</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-08-24 21:09:56" itemprop="dateCreated datePublished" datetime="2017-08-24T21:09:56+08:00">2017-08-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-08 17:59:26" itemprop="dateModified" datetime="2020-08-08T17:59:26+08:00">2020-08-08</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Spring-Bean-标签"><a href="#Spring-Bean-标签" class="headerlink" title="Spring @Bean 标签"></a>Spring @Bean 标签</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> TestA <span class="title">testA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> TestA();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//测试一</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    System.err.println(testA().toString());</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//测试二</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestCommder</span> <span class="keyword">implements</span> <span class="title">CommandLineRunner</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	TestA testA;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">(String... arg0)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		System.err.println(<span class="string">"auto wired..."</span> + testA.toString());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>A: 你这样反复调用testA()方法会产生很多对象，巴拉巴拉…你这样不对，快改。<br>B:一脸啊懵逼….</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输出结果：</span><br><span class="line"></span><br><span class="line">com.igaming.extmail.<span class="symbol">TestA@</span><span class="number">407</span>cf41</span><br><span class="line">com.igaming.extmail.<span class="symbol">TestA@</span><span class="number">407</span>cf41</span><br><span class="line">com.igaming.extmail.<span class="symbol">TestA@</span><span class="number">407</span>cf41</span><br><span class="line">com.igaming.extmail.<span class="symbol">TestA@</span><span class="number">407</span>cf41</span><br><span class="line">com.igaming.extmail.<span class="symbol">TestA@</span><span class="number">407</span>cf41</span><br><span class="line"><span class="built_in">auto</span> wired...com.igaming.extmail.<span class="symbol">TestA@</span><span class="number">407</span>cf41</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>老子说：夫为不争，故无忧。博君一笑！！！</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="http://z-starts.github.io/2017/08/23/spring-groovy-hotload.1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="0XDDE58">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔记">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/08/23/spring-groovy-hotload.1/" class="post-title-link" itemprop="url">Spring boot groovy 热更新</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-08-23 22:28:56" itemprop="dateCreated datePublished" datetime="2017-08-23T22:28:56+08:00">2017-08-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-08 18:08:11" itemprop="dateModified" datetime="2020-08-08T18:08:11+08:00">2020-08-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="http://z-starts.github.io/2017/08/13/spring-boot-jpa/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="0XDDE58">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔记">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/08/13/spring-boot-jpa/" class="post-title-link" itemprop="url">Spring boot jpa 多数据源配置</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-08-13 16:28:56" itemprop="dateCreated datePublished" datetime="2017-08-13T16:28:56+08:00">2017-08-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-25 16:27:56" itemprop="dateModified" datetime="2020-07-25T16:27:56+08:00">2020-07-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="数据源配置"><a href="#数据源配置" class="headerlink" title="数据源配置"></a>数据源配置</h2><h3 id="BoneCp配置示例"><a href="#BoneCp配置示例" class="headerlink" title="BoneCp配置示例"></a>BoneCp配置示例</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableTransactionManagement</span></span><br><span class="line"><span class="meta">@EnableJpaRepositories(</span></span><br><span class="line"><span class="meta">        entityManagerFactoryRef = <span class="meta-string">"primaryEntityManagerFactory"</span>,</span></span><br><span class="line"><span class="meta">        transactionManagerRef = <span class="meta-string">"primaryTransactionManager"</span>,</span></span><br><span class="line"><span class="meta">        basePackages = &#123;<span class="meta-string">"com.july.jpa.config.dao.parimary"</span>&#125;)</span></span><br><span class="line"><span class="meta">@PropertySource(value = <span class="meta-string">"classpath:jdbc.properties"</span>)</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix = <span class="meta-string">"primary"</span>)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrimaryDataSourceConfig</span> <span class="title">extends</span> <span class="title">BoneCPConfig</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Value(<span class="meta-string">"<span class="subst">$&#123;primary.show-sql&#125;</span>"</span>)</span></span><br><span class="line">    <span class="keyword">private</span> boolean showSql;</span><br><span class="line">    <span class="meta">@Value(<span class="meta-string">"<span class="subst">$&#123;primary.hbm2ddl.auto&#125;</span>"</span>)</span></span><br><span class="line">    <span class="keyword">private</span> String hbm2ddl;</span><br><span class="line">    <span class="meta">@Value(<span class="meta-string">"<span class="subst">$&#123;primary.database-platform&#125;</span>"</span>)</span></span><br><span class="line">    <span class="keyword">private</span> String platform;</span><br><span class="line">    <span class="meta">@Bean(name = <span class="meta-string">"primaryDataSource"</span>)</span></span><br><span class="line">    <span class="meta">@Primary</span></span><br><span class="line">    <span class="keyword">public</span> DataSource primaryDataSource() throws SQLException &#123;</span><br><span class="line">        <span class="keyword">return</span> new BoneCPDataSource(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Primary</span></span><br><span class="line">    <span class="meta">@Bean(name = <span class="meta-string">"primaryEntityManagerFactory"</span>)</span></span><br><span class="line">    <span class="keyword">public</span> LocalContainerEntityManagerFactoryBean entityManagerFactory(</span><br><span class="line">            EntityManagerFactoryBuilder builder,</span><br><span class="line">            <span class="meta">@Qualifier(<span class="meta-string">"primaryDataSource"</span>)</span> DataSource dataSource) &#123;</span><br><span class="line">        <span class="keyword">return</span> builder</span><br><span class="line">                .dataSource(dataSource)</span><br><span class="line">                .properties(getVendorProperties(dataSource))</span><br><span class="line">                .packages(<span class="string">"com.july.jpa.config.dao.parimary.domain"</span>)<span class="comment">//扫描orm映射实体类对应包下面的Entity</span></span><br><span class="line">                .persistenceUnit(<span class="string">"primary"</span>)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> JpaProperties jpaProperties;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Map&lt;String, String&gt; getVendorProperties(DataSource dataSource) &#123;</span><br><span class="line">        jpaProperties.setShowSql(showSql);</span><br><span class="line">        jpaProperties.getHibernate().setDdlAuto(hbm2ddl);</span><br><span class="line">        jpaProperties.setDatabasePlatform(platform);</span><br><span class="line">        <span class="keyword">return</span> jpaProperties.getHibernateProperties(dataSource);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean(name = <span class="meta-string">"primaryEntityManager"</span>)</span></span><br><span class="line">    <span class="keyword">public</span> EntityManager entityManager(<span class="meta">@Qualifier(<span class="meta-string">"primaryEntityManagerFactory"</span>)</span> EntityManagerFactory entityManagerFactory) &#123;</span><br><span class="line">        EntityManager manager = entityManagerFactory.createEntityManager();</span><br><span class="line">        <span class="keyword">return</span> manager;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Primary</span></span><br><span class="line">    <span class="meta">@Bean(name = <span class="meta-string">"primaryTransactionManager"</span>)</span></span><br><span class="line">    <span class="keyword">public</span> PlatformTransactionManager transactionManager(</span><br><span class="line">            <span class="meta">@Qualifier(<span class="meta-string">"primaryEntityManagerFactory"</span>)</span> EntityManagerFactory entityManagerFactory) &#123;</span><br><span class="line">        <span class="keyword">return</span> new JpaTransactionManager(entityManagerFactory);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Hikari配置示例"><a href="#Hikari配置示例" class="headerlink" title="Hikari配置示例"></a>Hikari配置示例</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableTransactionManagement</span></span><br><span class="line"><span class="meta">@EnableJpaRepositories(</span></span><br><span class="line"><span class="meta">        entityManagerFactoryRef = <span class="meta-string">"ds1EntityManagerFactory"</span>,</span></span><br><span class="line"><span class="meta">        transactionManagerRef = <span class="meta-string">"ds1TransactionManager"</span>,</span></span><br><span class="line"><span class="meta">        basePackages = &#123;<span class="meta-string">"com.july.jpa.config.dao.ds1"</span>&#125;)</span></span><br><span class="line"><span class="meta">@PropertySource(value = <span class="meta-string">"classpath:jdbc.properties"</span>)</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix = <span class="meta-string">"ds1"</span>)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataSourceOneConfig</span> <span class="title">extends</span> <span class="title">HikariConfig</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Value(<span class="meta-string">"<span class="subst">$&#123;ds1.show-sql&#125;</span>"</span>)</span></span><br><span class="line">    <span class="keyword">private</span> boolean showSql;</span><br><span class="line">    <span class="meta">@Value(<span class="meta-string">"<span class="subst">$&#123;ds1.hbm2ddl.auto&#125;</span>"</span>)</span></span><br><span class="line">    <span class="keyword">private</span> String hbm2ddl;</span><br><span class="line">    <span class="meta">@Value(<span class="meta-string">"<span class="subst">$&#123;ds1.database-platform&#125;</span>"</span>)</span></span><br><span class="line">    <span class="keyword">private</span> String platform;</span><br><span class="line">    <span class="meta">@Bean(name = <span class="meta-string">"ds1DataSource"</span>)</span></span><br><span class="line">    <span class="keyword">public</span> DataSource hikariDataSource() throws SQLException &#123;</span><br><span class="line">        <span class="keyword">return</span> new HikariDataSource(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean(name = <span class="meta-string">"ds1EntityManagerFactory"</span>)</span></span><br><span class="line">    <span class="keyword">public</span> LocalContainerEntityManagerFactoryBean ds1EntityManagerFactory(</span><br><span class="line">            EntityManagerFactoryBuilder builder,</span><br><span class="line">            <span class="meta">@Qualifier(<span class="meta-string">"ds1DataSource"</span>)</span> DataSource ds1DataSource) &#123;</span><br><span class="line">        <span class="keyword">return</span> builder</span><br><span class="line">                .dataSource(ds1DataSource)</span><br><span class="line">                .properties(getVendorProperties(ds1DataSource))</span><br><span class="line">                .packages(<span class="string">"com.july.jpa.config.dao.ds1.domain"</span>)<span class="comment">//扫描orm映射实体类对应包下面的Entity</span></span><br><span class="line">                .persistenceUnit(<span class="string">"ds1"</span>)</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> JpaProperties jpaProperties;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Map&lt;String, String&gt; getVendorProperties(DataSource dataSource) &#123;</span><br><span class="line">        jpaProperties.setShowSql(showSql);</span><br><span class="line">        jpaProperties.getHibernate().setDdlAuto(hbm2ddl);</span><br><span class="line">        jpaProperties.setDatabasePlatform(platform);</span><br><span class="line">        <span class="keyword">return</span> jpaProperties.getHibernateProperties(dataSource);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean(name = <span class="meta-string">"ds1EntityManager"</span>)</span></span><br><span class="line">    <span class="keyword">public</span> EntityManager entityManager(<span class="meta">@Qualifier(<span class="meta-string">"ds1EntityManagerFactory"</span>)</span> EntityManagerFactory entityManagerFactory) &#123;</span><br><span class="line">        EntityManager manager = entityManagerFactory.createEntityManager();</span><br><span class="line">        <span class="keyword">return</span> manager;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean(name = <span class="meta-string">"ds1TransactionManager"</span>)</span></span><br><span class="line">    <span class="keyword">public</span> PlatformTransactionManager ds1TransactionManager(</span><br><span class="line">            <span class="meta">@Qualifier(<span class="meta-string">"ds1EntityManagerFactory"</span>)</span> EntityManagerFactory ds1EntityManagerFactory) &#123;</span><br><span class="line">        <span class="keyword">return</span> new JpaTransactionManager(ds1EntityManagerFactory);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据源配置文件"><a href="#数据源配置文件" class="headerlink" title="数据源配置文件"></a>数据源配置文件</h2><p>1.注意ds1这类前缀，均要根据上文的配置类来指定。</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ds1.jdbcUrl</span>=jdbc:mysql://localhost:<span class="number">3306</span>/test?autoReconnect=<span class="literal">true</span>&amp;characterEncoding=UTF-<span class="number">8</span>&amp;failOverReadOnly=<span class="literal">false</span>&amp;useSSL=<span class="literal">false</span></span><br><span class="line"><span class="attr">ds1.username</span>=root</span><br><span class="line"><span class="attr">ds1.password</span>=root</span><br><span class="line"><span class="attr">ds1.driverClassName</span>=com.mysql.jdbc.Driver</span><br><span class="line"><span class="attr">ds1.maxConnectionsPerPartition</span>=<span class="number">20</span></span><br><span class="line"><span class="attr">ds1.minConnectionsPerPartition</span>=<span class="number">10</span></span><br><span class="line"><span class="attr">ds1.partitionCount</span>=<span class="number">2</span></span><br><span class="line"><span class="attr">ds1.acquireIncrement</span>=<span class="number">2</span></span><br><span class="line"><span class="attr">ds1.type</span>= com.zaxxer.hikari.HikariDataSource</span><br><span class="line"><span class="attr">ds1.minimumIdle</span> = <span class="number">20</span></span><br><span class="line"><span class="attr">ds1.maximumPoolSize</span> = <span class="number">30</span></span><br><span class="line"><span class="attr">ds1.idleTimeout</span> = <span class="number">5000</span></span><br><span class="line"><span class="attr">ds1.show-sql</span>=<span class="literal">false</span></span><br><span class="line"><span class="attr">ds1.hbm2ddl.auto</span>=update</span><br><span class="line"><span class="attr">ds1.database-platform</span>=org.hibernate.dialect.MySQL5Dialect</span><br></pre></td></tr></table></figure>
+
+<p>2.多数据源注意使用@Primary指定主数据源，否则会出错</p>
+<p>3.在配置类中指定JpaProperties，明确是否显示sql，是否自动创建表（hbm2ddl.auto）</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="http://z-starts.github.io/2015/12/19/nginx%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="0XDDE58">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔记">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/12/19/nginx%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">nginx负载均衡配置</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-12-19 12:59:56" itemprop="dateCreated datePublished" datetime="2015-12-19T12:59:56+08:00">2015-12-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-08 17:59:15" itemprop="dateModified" datetime="2020-08-08T17:59:15+08:00">2020-08-08</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="nginx负载均衡配置"><a href="#nginx负载均衡配置" class="headerlink" title="nginx负载均衡配置"></a>nginx负载均衡配置</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">TODO</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="http://z-starts.github.io/2015/12/03/%E6%97%A5%E6%8B%B1%E4%B8%80%E5%8D%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="0XDDE58">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔记">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/12/03/%E6%97%A5%E6%8B%B1%E4%B8%80%E5%8D%92/" class="post-title-link" itemprop="url">日拱一卒</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-12-03 20:55:37" itemprop="dateCreated datePublished" datetime="2015-12-03T20:55:37+08:00">2015-12-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-25 16:27:56" itemprop="dateModified" datetime="2020-07-25T16:27:56+08:00">2020-07-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="看清短板"><a href="#看清短板" class="headerlink" title="看清短板"></a>看清短板</h3><blockquote>
+<p>1.(不擅长布局，不擅长抠图)</p>
+</blockquote>
+<blockquote>
+<p>2.(对于技术考点不擅长表述)</p>
+</blockquote>
+<blockquote>
+<p>3.TODO</p>
+</blockquote>
+<h3 id="日拱一卒-每天进步一点"><a href="#日拱一卒-每天进步一点" class="headerlink" title="日拱一卒,每天进步一点"></a>日拱一卒,每天进步一点</h3><blockquote>
+<p>1.每天写点小布局相关的demo，每天学点ps抠图技巧。</p>
+</blockquote>
+<blockquote>
+<p>2.记录自己看到过的、领悟过的技术知识点，踩过的坑，温故才能知新。</p>
+</blockquote>
+<blockquote>
+<p>3.</p>
+</blockquote>
+<h3 id="随记"><a href="#随记" class="headerlink" title="随记"></a>随记</h3><blockquote>
+<p>1.时间：2015-12-03 21:03:04</p>
+</blockquote>
+<p>node web 系统token解决方案：<a href="http://haomou.net/2014/08/13/2014_web_token/" target="_blank" rel="noopener">http://haomou.net/2014/08/13/2014_web_token/</a></p>
+<h3 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h3><hr>
+<p>nwjs 打包步骤。</p>
+<blockquote>
+<ol>
+<li>官网wiki说明：<a href="https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps" target="_blank" rel="noopener">https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps</a></li>
+<li>注意的地方：package.json示例</li>
+</ol>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"UIDev"</span>,</span><br><span class="line">  <span class="attr">"main"</span>: <span class="string">"www/index.html"</span>,</span><br><span class="line">  <span class="attr">"window"</span>: &#123;</span><br><span class="line">    <span class="attr">"toolbar"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"width"</span>: <span class="number">1366</span>,</span><br><span class="line">    <span class="attr">"height"</span>: <span class="number">768</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"webkit"</span>: &#123;</span><br><span class="line">    <span class="attr">"plugin"</span>: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意需要先将www目录和package.json一起打包成zip，并重命名为<em>.nw，然后执行命令<code>copy /b nw.exe+app.nw app.exe</code>,最后用Enigma Virtual Box打包的时候需要注意将 ``` icudtl.dat,</em>.dll,nw.pak  ```  一起打包，这样封装的exe才能在其他地方直接运行</p>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="http://z-starts.github.io/2015/11/22/%E5%9B%9E%E5%BF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="0XDDE58">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔记">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/11/22/%E5%9B%9E%E5%BF%86/" class="post-title-link" itemprop="url">近一年工作回忆</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-11-22 21:44:56" itemprop="dateCreated datePublished" datetime="2015-11-22T21:44:56+08:00">2015-11-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-25 16:27:56" itemprop="dateModified" datetime="2020-07-25T16:27:56+08:00">2020-07-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="2014-12-01起"><a href="#2014-12-01起" class="headerlink" title="2014-12-01起"></a>2014-12-01起</h1><p><strong>进入新公司（JL）的第一天</strong>，新的工作环境和全新的工作方向，满心憧憬着可以在游戏数据分析这个方向有所建树，能做出一些令自己骄傲的产品。大饼很美好，现实很骨感。</p>
+<blockquote>
+<p>1.<code>第一个阶段：</code>三个新手准备懵懵懂懂的开始了工作，可惜，后端的同学A，还没坚持三天就离开了这个团队。只能我和UI的妹子B，继续硬着头皮开始了。三个月，<strong>两个web项目，ui设计、前端组件选型、后端框架确定、静态页面开发、根据所谓的领导意见修改UI、Java Web后端、测试环境部署、bug修复、中途需求变更再开发、项目部署，一步一步坚持到项目上线</strong>，奇葩的队友渐渐显露逗比的本性。<br><em>先说说这个时期的技术方案：后端原始数据采集（**</em>X同学10年开发经验，亲自操刀**<em>），单服log文件扫描，并计算（少量恶心模块计算逻辑甩给我的webserver计算）数据入库固化，数据延迟1小时。web技术方案：UI选择bootstrap、jQuery，主要组件为datatables,echarts,数据交互全部Ajax处理，Java后端选择JFinal（1.9）开发。</em>所有的技术选型都得自己从0开始，那一段时间挺辛苦的，但是看着自己攻克一个有一个技术难题，感觉自身技术得到了很大提升，X同学的部分不详。过完年，B妹子想换工作，在网上投简历，结果人力发现了，B被劝退（或者开除），从此只有我一人顶着压力继续开发，从此也即将开始给X同学擦屁股的苦逼日子*。</p>
+</blockquote>
+<blockquote>
+<p>2.<code>第二阶段：</code>穷则思变。需求不断的变化、衍生，功能不停的增加，工作时间不停的延长、deadline一再变化，不停的加班追赶进度，冷静下来后反思该如何避免这种困境、如何提高效率。开始慢慢的寻求一些好用的脚手架工具。首先当然是选择了bower，几个命令搞定依赖库，学习成本较低。其次，自动构建工具，这块可以选择很多东西，但是考虑到学习成本和队友的层次，就选择了百度的fis3，简单的配置，通过命令自动编译、压缩、文件合并、发布、实时更新效果，解放双手和大脑。最后，当然是要有一个重量级的前端框架来分离前端开发的视图和逻辑了，磕磕绊绊，各种观望、尝试，还是决定选择angularJs，个人是期望通通过指令来减少前端代码开发工作量，提高代码复用率。前后尝试了大概三个月的时间，做了不少demo，也在几个实验性的小项目中尝试了这套方案，并成功应用到接下来开发的系统中。目前看来用户反应良好。</p>
+</blockquote>
+<blockquote>
+<p>3.<code>下一个阶段：</code></p>
+</blockquote>
+<ol>
+<li>规范js代码，引入ES6特性，将前端真正工程化、模块化。</li>
+<li>引入less，提高样式表的开发效率，规范编码。</li>
+<li>优化系统易用性、提高系统性能。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="http://z-starts.github.io/2015/10/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E8%AE%B0%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="0XDDE58">
+      <meta itemprop="description" content="好记性不如烂笔头">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随笔记">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/10/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">开篇</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-10-24 20:49:09" itemprop="dateCreated datePublished" datetime="2015-10-24T20:49:09+08:00">2015-10-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-25 21:15:44" itemprop="dateModified" datetime="2020-07-25T21:15:44+08:00">2020-07-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="①感谢"><a href="#①感谢" class="headerlink" title="①感谢"></a>①感谢</h1><p>首先还是要感谢模板作者，因为你的工作，才使得我这个懒人可以很方便的使用这套UI。<a href="https://github.com/sanjinhub/hexo-theme-geek" target="_blank" rel="noopener">模板作者github</a></p>
+<h1 id="②记录"><a href="#②记录" class="headerlink" title="②记录"></a>②记录</h1><p>这里主要用来记录一些平时看到的好用的、好玩的开源项目，给自己做个备忘，也给大家一个参考。</p>
+<blockquote>
+<ol>
+<li><a href="http://spring.io" target="_blank" rel="noopener">Spring</a>这个大家一定很熟悉,但是想说的是其中的Spring-boot这个项目，用来做微服务很好用。</li>
+<li><a href="http://fis.baidu.com" target="_blank" rel="noopener">Fis3</a>，百度出品的前端自动构建工具，好评！</li>
+<li><a href="http://echarts.baidu.com" target="_blank" rel="noopener">ECharts</a>，百度出品前端图表库，好评！</li>
+<li><a href="https://github.com/alibaba/druid" target="_blank" rel="noopener">Druid</a>，阿里出品数据库连接池,推荐使用。</li>
+<li><a href="http://www.jfinal.com/" target="_blank" rel="noopener">JFinal</a>，Java极速web开发框架，好评！</li>
+<li><a href="https://angularjs.org/" target="_blank" rel="noopener">AngularJs</a>，谷歌出品，双向绑定、指令，好用，目前还在学习研究阶段。</li>
+<li><a href="https://facebook.github.io/react/" target="_blank" rel="noopener">React</a>    虚拟DOM操作，面向组件开发UI。</li>
+<li><a href="https://leetcode-cn.com/" target="_blank" rel="noopener">Leetcode</a> 算法练习网站</li>
+</ol>
+</blockquote>
+<h1 id="好用的站点技能"><a href="#好用的站点技能" class="headerlink" title="好用的站点技能"></a>好用的站点技能</h1><blockquote>
+<ol>
+<li><a href="https://www.gitbook.com/explore" target="_blank" rel="noopener">https://www.gitbook.com/explore</a></li>
+<li><a href="http://fex.baidu.com/blog/2015/05/nodejs-hot-swapping/" target="_blank" rel="noopener">http://fex.baidu.com/blog/2015/05/nodejs-hot-swapping/</a></li>
+<li><a href="http://socket.io/docs/" target="_blank" rel="noopener">http://socket.io/docs/</a></li>
+<li>nodejs orm 组件 <a href="http://docs.sequelizejs.com/en/latest/api/associations/belongs-to-many/" target="_blank" rel="noopener">http://docs.sequelizejs.com/en/latest/api/associations/belongs-to-many/</a></li>
+<li><a href="https://github.com/nomiddlename/log4js-node" target="_blank" rel="noopener">https://github.com/nomiddlename/log4js-node</a></li>
+<li><a href="https://github.com/expressjs/cors" target="_blank" rel="noopener">https://github.com/expressjs/cors</a></li>
+<li><a href="http://restify.com/#httpclient" target="_blank" rel="noopener">http://restify.com/#httpclient</a></li>
+<li>docker 安装说明：<br><a href="https://cnodejs.org/topic/53f494d9bbdaa79d519c9a4a" target="_blank" rel="noopener">https://cnodejs.org/topic/53f494d9bbdaa79d519c9a4a</a></li>
+<li>ionic 移动端H5框架：<br><a href="http://ionicframework.com/docs/" target="_blank" rel="noopener">http://ionicframework.com/docs/</a></li>
+<li>node 全栈框架 meteor –&gt;<br><a href="http://docs.meteor.com/#/basic/" target="_blank" rel="noopener">http://docs.meteor.com/#/basic/</a></li>
+<li>meteor 教程 <a href="http://www.hubwiz.com/course/55b87a7b3ad79a1b05dcc339/" target="_blank" rel="noopener">http://www.hubwiz.com/course/55b87a7b3ad79a1b05dcc339/</a></li>
+</ol>
+</blockquote>
+<h1 id="好文记录"><a href="#好文记录" class="headerlink" title="好文记录"></a>好文记录</h1><blockquote>
+<ol>
+<li>promisess 的正确使用方式：<a href="http://fex.baidu.com/blog/2015/07/we-have-a-problem-with-promises/" target="_blank" rel="noopener">http://fex.baidu.com/blog/2015/07/we-have-a-problem-with-promises/</a></li>
+<li>技术架构介绍 <a href="http://web.jobbole.com/82578/" target="_blank" rel="noopener">http://web.jobbole.com/82578/</a></li>
+</ol>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+        </div>
+        
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">0XDDE58</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
-
 </html>
