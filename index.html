@@ -382,7 +382,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-15 15:24:58" itemprop="dateModified" datetime="2020-08-15T15:24:58+08:00">2020-08-15</time>
+                <time title="Modified: 2020-08-15 15:34:51" itemprop="dateModified" datetime="2020-08-15T15:34:51+08:00">2020-08-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -432,6 +432,15 @@
 <li><code>:1,$s/word1/word2/g</code> 从第一行到最后一行行之间寻找word1这个字符串，并将该字符串替换为word2</li>
 <li><code>:1,$s/word1/word2/gc</code> 从第一行到最后一行行之间寻找word1这个字符串，并将该字符串替换为word2。且在替换前显示提示符给用户确认是否替换</li>
 </ul>
+<hr>
+<ul>
+<li><code>x,X</code> 在一行字当中，x为向后删除[Del]一个字符，X为向前删除[Backspace]一个字符</li>
+<li><code>nx</code> n为数字，连续向后删除n个字符 <code>nX</code> 连续向前删除n个字符</li>
+<li><code>dd</code> 删除光标所在整行 <code>ndd</code> 删除光标所在向下n行</li>
+<li><code>d1G</code> 删除光标所在到第一行的所有数据 <code>dG</code> 删除光标所在到最后一行的所有数据</li>
+<li><code>d$</code> 删除光标所在处到该行的最后一个字符 <code>d0</code> 删除光标所在处到该行最前面一个字符</li>
+</ul>
+<hr>
 <h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h2 id="安全设置"><a href="#安全设置" class="headerlink" title="安全设置"></a>安全设置</h2><h2 id="性能调优"><a href="#性能调优" class="headerlink" title="性能调优"></a>性能调优</h2><h2 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h2><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2>
       
     </div>
