@@ -116,20 +116,6 @@
   </url>
   
   <url>
-    <loc>http://z-starts.github.io/tags/JDK/</loc>
-    <lastmod>2020-08-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://z-starts.github.io/tags/Quartz/</loc>
-    <lastmod>2020-08-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://z-starts.github.io/tags/%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2020-08-15</lastmod>
     <changefreq>daily</changefreq>
@@ -137,7 +123,21 @@
   </url>
   
   <url>
+    <loc>http://z-starts.github.io/tags/JDK/</loc>
+    <lastmod>2020-08-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://z-starts.github.io/tags/mysql/</loc>
+    <lastmod>2020-08-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://z-starts.github.io/tags/Quartz/</loc>
     <lastmod>2020-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
