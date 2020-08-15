@@ -382,7 +382,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-08 18:23:00" itemprop="dateModified" datetime="2020-08-08T18:23:00+08:00">2020-08-08</time>
+                <time title="Modified: 2020-08-15 15:24:58" itemprop="dateModified" datetime="2020-08-15T15:24:58+08:00">2020-08-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -403,7 +403,36 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="重学Linux"><a href="#重学Linux" class="headerlink" title="重学Linux"></a>重学Linux</h1><h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h2 id="安全设置"><a href="#安全设置" class="headerlink" title="安全设置"></a>安全设置</h2><h2 id="性能调优"><a href="#性能调优" class="headerlink" title="性能调优"></a>性能调优</h2><h2 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h2><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2>
+          <h1 id="重学Linux"><a href="#重学Linux" class="headerlink" title="重学Linux"></a>重学Linux</h1><h1 id="vi-常用快捷键"><a href="#vi-常用快捷键" class="headerlink" title="vi 常用快捷键"></a>vi 常用快捷键</h1><ul>
+<li><code>h</code> ← 光标左移一个字符</li>
+<li><code>j</code> ↓ 光标下移一个字符</li>
+<li><code>k</code> ↑ 光标上移一个字符</li>
+<li><code>l</code> → 光标右移一个字符</li>
+<li><code>ctrl+f</code> 屏幕向下移动一页 [Page Down]效果</li>
+<li><code>ctrl+b</code> 屏幕向上移动一页 [Page Up]效果</li>
+<li><code>ctrl+d</code> 屏幕向上移动半页</li>
+<li><code>ctrl+u</code> 屏幕向上移动半页</li>
+<li><code>0</code> 移动到这一行的最前面字符处</li>
+<li><code>$</code> 移动到这一行的最后面字符处</li>
+<li><code>H</code> 光标移动到屏幕的最上方那一行的第一个字符</li>
+<li><code>M</code> 光标移动到屏幕的中央那一行的第一个字符</li>
+<li><code>L</code> 光标移动到屏幕的最下方那一行的第一个字符</li>
+<li><code>G</code> 光标移动到这个文件的最后一行的第一个字符</li>
+<li><code>nG</code> n为数字。移动到这个文件的第n行。例如：20G表示移动到20行</li>
+<li><code>gg</code> 移动到文件的第一行</li>
+<li><code>N[Enter]</code> n为数字。光标向下移动n行</li>
+</ul>
+<hr>
+<ul>
+<li><code>/word</code> 向下寻找一个名称为word的字符串。</li>
+<li><code>?word</code> 向上寻找一个名称为word的字符串。</li>
+<li><code>n</code> 重复前一个查找的操作</li>
+<li><code>N</code> “反向”进行前一个查找的操作</li>
+<li><code>:n1,n2s/word1/word2/g</code> n1,n2为数字。在第n1与n2行之间寻找word1这个字符串，并将该字符串替换为word2</li>
+<li><code>:1,$s/word1/word2/g</code> 从第一行到最后一行行之间寻找word1这个字符串，并将该字符串替换为word2</li>
+<li><code>:1,$s/word1/word2/gc</code> 从第一行到最后一行行之间寻找word1这个字符串，并将该字符串替换为word2。且在替换前显示提示符给用户确认是否替换</li>
+</ul>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h2 id="安全设置"><a href="#安全设置" class="headerlink" title="安全设置"></a>安全设置</h2><h2 id="性能调优"><a href="#性能调优" class="headerlink" title="性能调优"></a>性能调优</h2><h2 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h2><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2>
       
     </div>
 
