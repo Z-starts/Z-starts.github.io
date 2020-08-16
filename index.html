@@ -382,7 +382,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-15 21:17:29" itemprop="dateModified" datetime="2020-08-15T21:17:29+08:00">2020-08-15</time>
+                <time title="Modified: 2020-08-16 17:39:35" itemprop="dateModified" datetime="2020-08-16T17:39:35+08:00">2020-08-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -447,21 +447,34 @@
 </ul>
 <hr>
 <ul>
-<li><code>.vimrc</code> 配置内容<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">set</span> hlsearch</span><br><span class="line"><span class="builtin-name">set</span> ruler</span><br><span class="line"><span class="builtin-name">set</span> showmode</span><br><span class="line"><span class="builtin-name">set</span> nu</span><br><span class="line"><span class="builtin-name">set</span> <span class="attribute">bg</span>=dark</span><br><span class="line"></span><br><span class="line">syntax on</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
+<li><code>.vimrc</code> 配置内容<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> hlsearch</span><br><span class="line"><span class="built_in">set</span> ruler</span><br><span class="line"><span class="built_in">set</span> showmode</span><br><span class="line"><span class="built_in">set</span> nu</span><br><span class="line"><span class="built_in">set</span> <span class="built_in">bg</span>=dark</span><br><span class="line"></span><br><span class="line">syntax on</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
+<hr>
+<h2 id="Linux中的Chmod命令"><a href="#Linux中的Chmod命令" class="headerlink" title="Linux中的Chmod命令"></a><strong>Linux中的Chmod命令</strong></h2><p><code>chmod</code>代表更改模式。此命令用于更改访问方式。</p>
+<p><code>chmod</code>命令具有以下语法：</p>
+<p><code>chmod</code> [选项]模式文件</p>
+<p>在了解如何使用chmod之前，您应该了解其选项。</p>
+<p><code>-v</code>：为每个处理的文件输出诊断</p>
+<p><code>-c</code>：类似详细信息，但仅在进行更改时报告</p>
+<p>–reference = FILE：使用FILE的模式而不是MODE值</p>
+<p><code>–R</code>：递归更改权限</p>
+<ul>
+<li><strong>举几个比较明显的例子</strong></li>
+</ul>
+<p>递归更改目录中所有文件的权限</p>
+<p>chmod具有递归选项，允许您更改目录及其子目录中所有文件的权限。</p>
+<p><code>chmod -R 755 directory</code></p>
+<p><code>chmod + x</code>或``chmod a + x`：每个人都可以执行</p>
+<p>chmod最常用的情况之一是为文件提供执行位。通常，下载可执行文件后，您需要先添加此权限，然后才能使用它。授予所有者，组和其他所有人执行文件的权限：</p>
+<p><code>chmod +x /path/to/file</code></p>
+<p><code>chmod 755</code>：只有所有者才能为所有人编写，阅读和执行</p>
+<p>下一个命令将对文件rwxr-xr-x设置以下权限。仅所有者可以被允许写入文件。所有者，组成员和其他所有人均具有读取和执行权限。</p>
+<p><code>chmod 755 /path/to/file</code></p>
 <h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h2 id="安全设置"><a href="#安全设置" class="headerlink" title="安全设置"></a>安全设置</h2><h2 id="性能调优"><a href="#性能调优" class="headerlink" title="性能调优"></a>性能调优</h2><h2 id="脚本编写"><a href="#脚本编写" class="headerlink" title="脚本编写"></a>脚本编写</h2><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ul>
 <li><p>linux 、windos 文件换行符转换<code>sudo yum install dos2unix -y</code></p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dos2unix -k <span class="keyword">test</span>.txt</span><br><span class="line"></span><br><span class="line">unix2dos -k <span class="keyword">test</span>.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dos2unix -k test.txt</span><br><span class="line"></span><br><span class="line">unix2dos -k test.txt</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
