@@ -466,7 +466,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-17 08:48:57" itemprop="dateModified" datetime="2020-08-17T08:48:57+08:00">2020-08-17</time>
+                <time title="Modified: 2020-08-18 15:37:18" itemprop="dateModified" datetime="2020-08-18T15:37:18+08:00">2020-08-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -505,6 +505,11 @@
 <li><code>nG</code> n为数字。移动到这个文件的第n行。例如：20G表示移动到20行</li>
 <li><code>gg</code> 移动到文件的第一行</li>
 <li><code>N[Enter]</code> n为数字。光标向下移动n行</li>
+</ul>
+<hr>
+<ul>
+<li>复制一行数据？？？？？</li>
+<li></li>
 </ul>
 <hr>
 <ul>
@@ -563,9 +568,67 @@
 </li>
 </ul>
 <ul>
-<li>查看文件编码信息 <code>file test.txt        
-test.txt: UTF-8 Unicode text</code></li>
-<li>转换文件编码 <code>iconv</code>, <code>iconv -f UTF-8 -t GBK test.txt -o test.gbk.txt</code> or <code>iconv -f utf-8 -t gb2312 aaa.txt &gt;bbb.txt</code>字符集转换</li>
+<li><p>查看文件编码信息 <code>file test.txt        
+test.txt: UTF-8 Unicode text</code></p>
+</li>
+<li><p>转换文件编码 <code>iconv</code>, <code>iconv -f UTF-8 -t GBK test.txt -o test.gbk.txt</code> or <code>iconv -f utf-8 -t gb2312 aaa.txt &gt;bbb.txt</code>字符集转换</p>
+</li>
+<li><p>使用<code>awk</code>命令查看文件大小<code>ls -l |awk &#39;BEGIN {size=0;print &quot;[start]size is &quot;, size} {if($5!=4096){size=size+$5;}} END{print &quot;[end]size is &quot;, size/1024/1024,&quot;M&quot;}&#39;</code> ,过滤显示文本<code>ps -ef | grep java| awk &#39;{print $2&quot;\t&quot;$12}&#39;</code></p>
+</li>
+</ul>
+<h1 id="机器时间同步"><a href="#机器时间同步" class="headerlink" title="机器时间同步"></a>机器时间同步</h1><ul>
+<li><p>查看硬件时间 <code>hwclock --show</code></p>
+</li>
+<li><p>查看系统时间 <code>date</code></p>
+</li>
+<li><p>同步真实时间到系统 <code>ntpdate -u ntp.api.bz</code> </p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@node1 ~]# ntpdate [NTP IP/hostname]</span><br><span class="line">[root@node1 ~]# ntpdate 192.168.0.1</span><br><span class="line">[root@node1 ~]# ntpdate -u ntp.api.bz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>以系统时间为基准，修改硬件时间<code>hwclock -w</code>,以硬件时间为基准，修改系统时间<code>hwclock -s</code></p>
+</li>
+</ul>
+<h2 id="主备时间同步"><a href="#主备时间同步" class="headerlink" title="主备时间同步"></a>主备时间同步</h2><h3 id="主备均从标准时间服务同步时间到本机"><a href="#主备均从标准时间服务同步时间到本机" class="headerlink" title="主备均从标准时间服务同步时间到本机"></a>主备均从标准时间服务同步时间到本机</h3><ol>
+<li><p>使用<code>ntpdate</code>手动做好机器时间同步</p>
+</li>
+<li><p>添加定时任务<code>crontab -e</code>设置好需要同步的指令</p>
+</li>
+</ol>
+<p><code>crontab -l</code> 查看定时任务。 <code>tail -f /var/log/cron</code> 查看crontab执行日志。也可以简单的在主、备机器上同时使用crontab 定时任务，从标准时间服务同步时间<code>*/2 * * * * /usr/sbin/ntpdate -u ntp.api.bz</code></p>
+<h3 id="主服务器从标准同步时间，备服务器从主服务器同步时间"><a href="#主服务器从标准同步时间，备服务器从主服务器同步时间" class="headerlink" title="主服务器从标准同步时间，备服务器从主服务器同步时间"></a>主服务器从标准同步时间，备服务器从主服务器同步时间</h3><ol>
+<li><p>修改<code>ntpd</code>服务配置 <code>vi /etc/ntp.conf</code> ，内容如下</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1. 关于权限设定部分 </span></span><br><span class="line"><span class="meta">#</span><span class="bash">　　权限的设定主要以 restrict 这个参数来设定，主要的语法为： </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 　　restrict IP mask netmask_IP parameter </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 　　其中 IP 可以是软件地址，也可以是 default ，default 就类似 0.0.0.0 </span></span><br><span class="line"><span class="meta">#</span><span class="bash">　　至于 paramter 则有： </span></span><br><span class="line"><span class="meta">#</span><span class="bash">　　　ignore　：关闭所有的 NTP 联机服务 </span></span><br><span class="line"><span class="meta">#</span><span class="bash">　　　nomodify：表示 Client 端不能更改 Server 端的时间参数，不过Client 端仍然可以透过 Server 端来进行网络校时。</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">　　　notrust ：该 Client 除非通过认证，否则该 Client 来源将被视为不信任网域 </span></span><br><span class="line"><span class="meta">#</span><span class="bash">　　　noquery ：不提供 Client 端的时间查询</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">　　　notrap ：不提供<span class="built_in">trap</span>这个远程事件登入</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">　　如果 paramter 完全没有设定，那就表示该 IP (或网域)<span class="string">"没有任何限制"</span></span></span><br><span class="line"></span><br><span class="line">restrict default nomodify notrap noquery　# 关闭所有的 NTP 要求封包</span><br><span class="line"></span><br><span class="line">restrict 127.0.0.1　　　 #这是允许本机查询</span><br><span class="line"></span><br><span class="line">restrict 192.168.0.1 mask 255.255.255.0 nomodify</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">在192.168.0.1/24网段内的服务器就可以通过这台NTP Server进行时间同步了 </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 2. 上层主机的设定 </span></span><br><span class="line"><span class="meta">#</span><span class="bash">　　要设定上层主机主要以 server 这个参数来设定，语法为：</span></span><br><span class="line"><span class="meta">#</span><span class="bash">　　server [IP|HOST Name] [prefer]</span></span><br><span class="line"><span class="meta">#</span><span class="bash">　　Server 后面接的就是上层 Time Server，而如果 Server 参数</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 后面加上 perfer 的话，那表示我们的 NTP 主机主要以该部主机来</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 作为时间校正的对应。另外，为了解决更新时间封包的传送延迟动作，</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">　　所以可以使用 driftfile 来规定我们的主机 </span></span><br><span class="line"><span class="meta">#</span><span class="bash">　　在与 Time Server 沟通时所花费的时间，可以记录在 driftfile  </span></span><br><span class="line"><span class="meta">#</span><span class="bash">　　后面接的文件内，例如下面的范例中，我们的 NTP server 与  </span></span><br><span class="line"><span class="meta">#</span><span class="bash">　　cn.pool.ntp.org联机时所花费的时间会记录在 /etc/ntp/drift文件内 </span></span><br><span class="line">server 0.pool.ntp.org</span><br><span class="line"></span><br><span class="line">server 1.pool.ntp.org</span><br><span class="line"></span><br><span class="line">server 2.pool.ntp.org</span><br><span class="line"></span><br><span class="line">server cn.pool.ntp.org prefer</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">其他设置值，以系统默认值即可</span></span><br><span class="line"></span><br><span class="line">server  127.127.1.0     # local clock</span><br><span class="line"></span><br><span class="line">fudge   127.127.1.0 stratum 10</span><br><span class="line"></span><br><span class="line">driftfile /var/lib/ntp/drift</span><br><span class="line">broadcastdelay  0.008</span><br><span class="line"></span><br><span class="line">keys /etc/ntp/keys</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>使用ntpd服务，要好于ntpdate加cron的组合。因为，ntpdate同步时间会造成时间的突变和跳跃，对一些依赖时间的程序和服务会造成影响。比如sleep，timer等。而且ntpd服务可以在修正时间的同时，修正CPU Tick。因此理想的做法为，在开机的时候，使用ntpdate强制同步时间，在其他时候使用ntpd服务来同步时间。要注意的是，ntpd 有一个自我保护的机制：<strong>如果本机与上源时间相差太大，ntpd 不会运行时间同步操作</strong>，所以新设置的时间服务器一定要先 ntpdate 从上源取得时间初值, 然后启动 ntpd服务。ntpd服务运行后，先是每64秒与上源NTP服务器同步一次，根据每次同步时测得的误差值经复杂计算逐步调整自己的时间，随着误差减小，逐步增加同步的间隔。每次跳动，都会重复这个调整的过程。</p>
+</blockquote>
+</li>
+<li><p>启动ntpd服务<code>/etc/init.d/ntpd start</code></p>
+</li>
+<li><p>查看启动情况<code>netstat -ln |grep :123</code></p>
+</li>
+<li><p>确认ntp服务已启用 <code>ntpstat</code></p>
+ <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@zft2084 ~]# ntpstat</span><br><span class="line">synchronised <span class="keyword">to</span> local net (127.127.1.0) at stratum 11</span><br><span class="line">   time correct <span class="keyword">to</span> within 1950 ms</span><br><span class="line">   polling<span class="built_in"> server </span>every 64 s</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>此时，备服务器就可以同此机器进行时间同步（可以手动<code>ntpdate</code>也可<code>crontab</code> 定时同步）</p>
+</li>
+</ol>
+<h3 id="ntp-服务相关问题"><a href="#ntp-服务相关问题" class="headerlink" title="ntp 服务相关问题"></a>ntp 服务相关问题</h3><ul>
+<li><p>检查服务是否存在<code>systemctl list-unit-files --type=service | grep ntp</code> 查看<code>ntpdate.service</code> <code>ntpd.service</code>。</p>
+</li>
+<li><p>如果出现命令不可用，则需要查看是否安装ntp服务<code>rpm -q ntp</code>,安装<code>yum install ntpdate ntp -y</code></p>
+</li>
+<li><p>设置ntp系统开机自启动：</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable ntpd # 启用ntpd</span><br><span class="line">systemctl enable ntpdate # 启用ntpdate</span><br><span class="line">systemctl is-enabled ntpd # 检查ntpd是否启用</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动ntp服务器</p>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl start ntpdate</span><br><span class="line">systemctl start ntpd</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看ntp状态<code>ntpq -p</code> ,输出内容如下</p>
+  <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">root@</span>zft2084 ~]# ntpq -p</span><br><span class="line">     remote           <span class="built_in">ref</span>id      st t when poll reach   delay   offset  jitter</span><br><span class="line">==============================================================================</span><br><span class="line"> time.cloudflare .INIT.          <span class="number">16</span> u    -   <span class="number">64</span>    <span class="number">0</span>    <span class="number">0.000</span>    <span class="number">0.000</span>   <span class="number">0.000</span></span><br><span class="line"> ntp.xtom.nl     <span class="number">194.80</span><span class="number">.204</span><span class="number">.184</span>   <span class="number">2</span> u   <span class="number">30</span>   <span class="number">64</span>    <span class="number">1</span>  <span class="number">193.569</span>   <span class="number">-0.037</span>   <span class="number">0.000</span></span><br><span class="line"> tick.ntp.infoma .GPS.            <span class="number">1</span> u   <span class="number">29</span>   <span class="number">64</span>    <span class="number">1</span>  <span class="number">248.769</span>    <span class="number">3.490</span>   <span class="number">0.000</span></span><br><span class="line">*LOCAL(<span class="number">0</span>)        .LOCL.          <span class="number">10</span> l   <span class="number">34</span>   <span class="number">64</span>    <span class="number">1</span>    <span class="number">0.000</span>    <span class="number">0.000</span>   <span class="number">0.000</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
 </ul>
 
       
