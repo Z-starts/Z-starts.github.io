@@ -116,7 +116,7 @@
 
   <url>
     <loc>http://z-starts.github.io/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -124,49 +124,49 @@
   
   <url>
     <loc>http://z-starts.github.io/tags/SpringBoot/</loc>
-    <lastmod>2020-08-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://z-starts.github.io/tags/%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2020-08-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://z-starts.github.io/tags/Docker/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://z-starts.github.io/tags/JDK/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://z-starts.github.io/tags/Spring/</loc>
-    <lastmod>2020-08-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://z-starts.github.io/tags/mysql/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <loc>http://z-starts.github.io/tags/%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2020-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://z-starts.github.io/tags/Quartz/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://z-starts.github.io/tags/mysql/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://z-starts.github.io/tags/Docker/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://z-starts.github.io/tags/Spring/</loc>
+    <lastmod>2020-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -175,21 +175,21 @@
   
   <url>
     <loc>http://z-starts.github.io/categories/Java/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://z-starts.github.io/categories/Linux/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://z-starts.github.io/categories/DB/</loc>
-    <lastmod>2020-08-21</lastmod>
+    <lastmod>2020-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
