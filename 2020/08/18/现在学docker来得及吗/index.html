@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="随笔记">
 <meta property="og:description" content="Docker学习记录环境说明123MacOs 10.15.62.6 GHz 六核Intel Core i716 GB 2667 MHz DDR4  安装">
 <meta property="article:published_time" content="2020-08-18T08:32:27.000Z">
-<meta property="article:modified_time" content="2020-08-25T00:20:54.139Z">
+<meta property="article:modified_time" content="2020-10-31T15:44:58.789Z">
 <meta property="article:author" content="0XDDE58">
 <meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary">
@@ -150,7 +150,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">13</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">14</span></a>
 
   </li>
         <li class="menu-item menu-item-sitemap">
@@ -187,7 +187,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker学习记录"><span class="nav-number">1.</span> <span class="nav-text">Docker学习记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境说明"><span class="nav-number">1.1.</span> <span class="nav-text">环境说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Docker学习记录"><span class="nav-number">1.</span> <span class="nav-text">Docker学习记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境说明"><span class="nav-number">1.1.</span> <span class="nav-text">环境说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-安装mysql"><span class="nav-number">1.3.</span> <span class="nav-text">Docker 安装mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-执行脚本"><span class="nav-number">1.4.</span> <span class="nav-text">Docker 执行脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决Docker中文乱码问题"><span class="nav-number">1.5.</span> <span class="nav-text">解决Docker中文乱码问题</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -203,7 +203,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -286,7 +286,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-25 08:20:54" itemprop="dateModified" datetime="2020-08-25T08:20:54+08:00">2020-08-25</time>
+                <time title="Modified: 2020-10-31 23:44:58" itemprop="dateModified" datetime="2020-10-31T23:44:58+08:00">2020-10-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -324,6 +324,43 @@
         <h1 id="Docker学习记录"><a href="#Docker学习记录" class="headerlink" title="Docker学习记录"></a>Docker学习记录</h1><h2 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MacOs 10.15.6</span><br><span class="line">2.6 GHz 六核Intel Core i7</span><br><span class="line">16 GB 2667 MHz DDR4</span><br></pre></td></tr></table></figure>
 
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><a id="more"></a>
+
+
+
+<h2 id="Docker-安装mysql"><a href="#Docker-安装mysql" class="headerlink" title="Docker 安装mysql"></a>Docker 安装mysql</h2><ol>
+<li><p><a href="https://www.cnblogs.com/sablier/p/11605606.html" target="_blank" rel="noopener">https://www.cnblogs.com/sablier/p/11605606.html</a></p>
+</li>
+<li><p>拉取镜像</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:5.7   <span class="comment"># 拉取 mysql 5.7</span></span><br><span class="line">docker pull mysql       <span class="comment"># 拉取最新版mysql镜像</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>sudo docker images</code> </p>
+</li>
+<li><p>启动镜像<code>sudo docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7</code> mysql:5.7为第二步的安装的镜像名</p>
+<ul>
+<li>–-name：容器名，此处命名为<code>mysql</code></li>
+<li>-e：配置信息，此处配置mysql的root用户的登陆密码</li>
+<li>-p：端口映射，此处映射 主机3306端口 到 容器的3306端口</li>
+</ul>
+</li>
+</ol>
+<h2 id="Docker-执行脚本"><a href="#Docker-执行脚本" class="headerlink" title="Docker 执行脚本"></a>Docker 执行脚本</h2><ol>
+<li><p>先将sql文件copy到docker容器里<code>docker ps</code> 找到容器的短ID或者指定的  得到指定容器的全ID</p>
+</li>
+<li><p>docker cp 本地文件路径 ID全称:容器路径<code>docker cp mysql.sql 12345:/tmp/</code></p>
+</li>
+<li><p>将文件copy进容器之后，进入docke 容器<code>docker exec -it mysql bash</code> 进入容器<code>mysql -u root -p</code> 进入mysql服务</p>
+</li>
+</ol>
+<p><code>show databases;</code>查看数据库;<code>use database</code> 进入数据库执行sql文件<code>source /tmp/xxx.sql</code></p>
+<h2 id="解决Docker中文乱码问题"><a href="#解决Docker中文乱码问题" class="headerlink" title="解决Docker中文乱码问题"></a>解决Docker中文乱码问题</h2><ol>
+<li><p>命令行查看数据中文乱码使用一下命令进入中端<code>docker exec -it (id/name) env LANG=C.UTF-8  bash</code></p>
+</li>
+<li><p>查看mysql语言配置<code>#查询默认字符集 
+ show variables like &#39;character_set%&#39;;</code></p>
+</li>
+<li></li>
+</ol>
+
     </div>
 
     
